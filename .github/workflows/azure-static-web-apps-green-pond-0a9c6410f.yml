@@ -44,3 +44,7 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_GREEN_POND_0A9C6410F }}
           action: "close"
+
+               - name: Microsoft 365 certification quick evaluation
+                uses: Azure/microsoft-365-certification-quick-evaluation@v1.0.1
+                     
