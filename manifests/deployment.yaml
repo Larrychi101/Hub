@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hub-2024
+  labels:
+    app: hub-2024
+    kubernetes.azure.com/generator: devhub
+  namespace: namespace-workflow-1735382944050
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hub-2024
+  template:
+    metadata:
+      labels:
+        app: hub-2024
+    spec:
+      containers:
+        - name: hub-2024
+          image: 2024K8Sregistry.azurecr.io/image-workflow-1735382944050:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
