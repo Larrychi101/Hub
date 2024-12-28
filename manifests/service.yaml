@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hub-2024
+  namespace: namespace-workflow-1735382944050
+  labels:
+    kubernetes.azure.com/generator: devhub
+spec:
+  type: LoadBalancer
+  selector:
+    app: hub-2024
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
